@@ -42,7 +42,7 @@ def create_multiple_chart(lst):
     for year in range(10):
         py.sign_in('bankok_bank', 'biay9nqniq')
         trace1 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[0][count], lst[7][count], lst[14][count]],
             marker=Marker(
                 color='#86a2d7'
@@ -50,7 +50,7 @@ def create_multiple_chart(lst):
             name='over_fifteen'
         )
         trace2 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[1][count], lst[8][count], lst[15][count]],
             marker=Marker(
                 color='#3aa0ad'
@@ -58,7 +58,7 @@ def create_multiple_chart(lst):
             name='total_labor_force'
         )
         trace3 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[2][count], lst[9][count], lst[16][count]],
             marker=Marker(
                 color='#6b80ce'
@@ -66,7 +66,7 @@ def create_multiple_chart(lst):
             name='employed'
         )
         trace4 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[3][count], lst[10][count], lst[17][count]],
             marker=Marker(
                 color='#3b86b2'
@@ -74,7 +74,7 @@ def create_multiple_chart(lst):
             name='Unemployed'
         )
         trace5 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[4][count], lst[11][count], lst[18][count]],
             marker=Marker(
                 color='#2d4686'
@@ -82,7 +82,7 @@ def create_multiple_chart(lst):
             name='seasonally_inactive_labor_force'
         )
         trace6 = Bar(
-            x=['all_population', 'male_population', 'female_population'],
+            x=['All_population', 'Male_population', 'Female_population'],
             y=[lst[5][count], lst[12][count], lst[19][count]],
             marker=Marker(
                 color='#1b3c50'
