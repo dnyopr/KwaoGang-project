@@ -1,30 +1,3 @@
-'''
-Show predict graphs by using data from lists.
-
-    Lines below are kind of lists.
-1. All population
-    over fifteen = lst[0]
-    total labor force = lst[1]
-    employed = lst[2]
-    unemployed = lst[3]
-    seasonally inactive labor force = lst[4]
-    person not in labor force = lst[5]
-2. Male population
-    over fifteen = lst[7]
-    total labor force = lst[8]
-    employed = lst[9]
-    unemployed = lst[10]
-    seasonally inactive labor force = lst[11]
-    person not in labor force = lst[12]
-3. Female population
-    over fifteen = lst[14]
-    total labor force = lst[15]
-    employed = lst[16]
-    unemployed = lst[17]
-    seasonally inactive labor force = lst[18]
-    person not in labor force = lst[19]
-'''
-
 import csv
 import plotly.plotly as py
 from plotly.graph_objs import *
@@ -103,14 +76,12 @@ pred_lst.append(predrict_3year(unemployed_f))                      #pre_unemp_f
 pred_lst.append(predrict_3year(seasonally_inactive_labor_force_f)) #pre_season_f
 pred_lst.append(predrict_3year(person_not_in_labor_force_f))       #pre_not_in_f
 
-
 def create_all_chart(pred_lst):
-    count = 0
-    for year in range(12):
+    for year in range(13):
         py.sign_in('kawin3236', '95lgy6q419')
         trace1 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[0][count], pred_lst[6][count], pred_lst[12][count]],
+            y=[pred_lst[0][year], pred_lst[6][year], pred_lst[12][year]],
             marker=Marker(
                 color='#86a2d7'
             ),
@@ -118,7 +89,7 @@ def create_all_chart(pred_lst):
         )
         trace2 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[1][count], pred_lst[7][count], pred_lst[13][count]],
+            y=[pred_lst[1][year], pred_lst[7][year], pred_lst[13][year]],
             marker=Marker(
                 color='#3aa0ad'
             ),
@@ -126,7 +97,7 @@ def create_all_chart(pred_lst):
         )
         trace3 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[2][count], pred_lst[8][count], pred_lst[14][count]],
+            y=[pred_lst[2][year], pred_lst[8][year], pred_lst[14][year]],
             marker=Marker(
                 color='#6b80ce'
             ),
@@ -134,7 +105,7 @@ def create_all_chart(pred_lst):
         )
         trace4 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[3][count], pred_lst[9][count], pred_lst[15][count]],
+            y=[pred_lst[3][year], pred_lst[9][year], pred_lst[15][year]],
             marker=Marker(
                 color='#3b86b2'
             ),
@@ -142,7 +113,7 @@ def create_all_chart(pred_lst):
         )
         trace5 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[4][count], pred_lst[10][count], pred_lst[16][count]],
+            y=[pred_lst[4][year], pred_lst[10][year], pred_lst[16][year]],
             marker=Marker(
                 color='#2d4686'
             ),
@@ -150,7 +121,7 @@ def create_all_chart(pred_lst):
         )
         trace6 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pred_lst[5][count], pred_lst[11][count], pred_lst[17][count]],
+            y=[pred_lst[5][year], pred_lst[11][year], pred_lst[17][year]],
             marker=Marker(
                 color='#1b3c50'
             ),
@@ -178,12 +149,10 @@ def create_all_chart(pred_lst):
         fig = Figure(data=data, layout=layout)
         plot_url = py.plot(data, filename=str(year))
 
-        count += 1
-
-        py.sign_in('kawin3236', '95lgy6q419')
+py.sign_in('kawin3236', '95lgy6q419')
 trace1 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[0])),
+    y=list(map(str, pred_lst[0])),
     marker=Marker(
         size=12
     ),
@@ -195,7 +164,7 @@ trace1 = Scatter(
 )
 trace2 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[1])),
+    y=list(map(str, pred_lst[1])),
         marker=Marker(
         size=12
     ),
@@ -207,7 +176,7 @@ trace2 = Scatter(
 )
 trace3 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[2])),
+    y=list(map(str, pred_lst[2])),
         marker=Marker(
         size=12
     ),
@@ -219,7 +188,7 @@ trace3 = Scatter(
 )
 trace4 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[3])),
+    y=list(map(str, pred_lst[3])),
         marker=Marker(
         size=12
     ),
@@ -231,7 +200,7 @@ trace4 = Scatter(
 )
 trace5 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[4])),
+    y=list(map(str, pred_lst[4])),
         marker=Marker(
         size=12
     ),
@@ -243,7 +212,7 @@ trace5 = Scatter(
 )
 trace6 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-    y=list(map(str, lst[5])),
+    y=list(map(str, pred_lst[5])),
         marker=Marker(
         size=12
     ),
@@ -389,6 +358,6 @@ layout = Layout(
     )
 )
 fig = Figure(data=data, layout=layout)
-plot_url = py.plot(data, filename='date-axes')
-        
-create_all_chart(lst)
+plot_url = py.plot(data, filename='line_plot')
+
+create_all_chart(pred_lst)
