@@ -830,11 +830,11 @@ with open('test1.csv',newline='') as csvfile:
 
 def create_all_chart(lst):
     count = 0
-    for year in range(10):
-        py.sign_in('it58070041', 'bxhjqg6nps')
+    for year in range(4):
+        py.sign_in('phunpp', '9cjduh3bzn')
         trace1 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_overfif(lst[0])[count], pre_overfif_m(lst[7])[count], pre_overfif_f(lst[14])[count]],
+            y=[pre_overfif(lst[0][count]), pre_overfif_m(lst[7][count]), pre_overfif_f(lst[14][count])],
             marker=Marker(
                 color='#86a2d7'
             ),
@@ -842,7 +842,7 @@ def create_all_chart(lst):
         )
         trace2 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=pre_totallabor([lst[1])[count], pre_totallabor_m(lst[8])[count], pre_totallabor_f(lst[15])[count]],
+            y=[pre_totallabor(lst[1][count]), pre_totallabor_m(lst[8][count]), pre_totallabor_f(lst[15][count])],
             marker=Marker(
                 color='#3aa0ad'
             ),
@@ -850,7 +850,7 @@ def create_all_chart(lst):
         )
         trace3 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=pre_employed([lst[2])[count], pre_employed_m(lst[9])[count], pre_employed_f(lst[16])[count]],
+            y=[pre_employed(lst[2][count]), pre_employed_m(lst[9][count]), pre_employed_f(lst[16][count])],
             marker=Marker(
                 color='#6b80ce'
             ),
@@ -858,7 +858,7 @@ def create_all_chart(lst):
         )
         trace4 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_unemployed(lst[3])[count], pre_unemployed_m(lst[10])[count], pre_unemployed_f(lst[17])[count]],
+            y=[pre_unemployed(lst[3][count]), pre_unemployed_m(lst[10][count]), pre_unemployed_f(lst[17][count])],
             marker=Marker(
                 color='#3b86b2'
             ),
@@ -866,7 +866,7 @@ def create_all_chart(lst):
         )
         trace5 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_seasonally(lst[4])[count], pre_seasonally_m(lst[11])[count], pre_seasonally_f(lst[18])[count]],
+            y=[pre_seasonally(lst[4][count]), pre_seasonally_m(lst[11][count]), pre_seasonally_f(lst[18][count])],
             marker=Marker(
                 color='#2d4686'
             ),
@@ -874,7 +874,7 @@ def create_all_chart(lst):
         )
         trace6 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_notinlabor(lst[5])[count], pre_notinlabor_m(lst[12])[count], pre_notinlabor_f(lst[19])[count]],
+            y=[pre_notinlabor(lst[5][count]), pre_notinlabor_m(lst[12][count]), pre_notinlabor_f(lst[19][count])],
             marker=Marker(
                 color='#1b3c50'
             ),
@@ -904,7 +904,7 @@ def create_all_chart(lst):
 
         count += 1
 
-        py.sign_in('it58070041', 'bxhjqg6nps')
+        py.sign_in('phunpp', '9cjduh3bzn')
 trace1 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
     y=list(map(str, lst[0])),
