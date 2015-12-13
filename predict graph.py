@@ -102,12 +102,12 @@ pred_lst.append(predrict_3year(employed_f))                          #pre_emp_f
 pred_lst.append(predrict_3year(unemployed_f))                      #pre_unemp_f
 pred_lst.append(predrict_3year(seasonally_inactive_labor_force_f)) #pre_season_f
 pred_lst.append(predrict_3year(person_not_in_labor_force_f))       #pre_not_in_f
-print(pred_lst)
+
 
 def create_all_chart(pred_lst):
     count = 0
-    for year in range(13):
-        py.sign_in('bankok_bank', 'biay9nqniq')
+    for year in range(12):
+        py.sign_in('kawin3236', '95lgy6q419')
         trace1 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[0][count], pred_lst[6][count], pred_lst[12][count]],
@@ -180,9 +180,9 @@ def create_all_chart(pred_lst):
 
         count += 1
 
-        py.sign_in('bankok_bank', 'biay9nqniq')
+        py.sign_in('kawin3236', '95lgy6q419')
 trace1 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[0])),
     marker=Marker(
         size=12
@@ -194,7 +194,7 @@ trace1 = Scatter(
     ysrc='RhettAllain:45:4e00758aa75a9cc2afa876ddead953cd'
 )
 trace2 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[1])),
         marker=Marker(
         size=12
@@ -206,7 +206,7 @@ trace2 = Scatter(
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
 )
 trace3 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[2])),
         marker=Marker(
         size=12
@@ -218,7 +218,7 @@ trace3 = Scatter(
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
 )
 trace4 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[3])),
         marker=Marker(
         size=12
@@ -230,7 +230,7 @@ trace4 = Scatter(
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
 )
 trace5 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[4])),
         marker=Marker(
         size=12
@@ -242,7 +242,7 @@ trace5 = Scatter(
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
 )
 trace6 = Scatter(
-    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+    x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
     y=list(map(str, lst[5])),
         marker=Marker(
         size=12
