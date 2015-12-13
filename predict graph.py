@@ -33,8 +33,6 @@ with open('test1.csv',newline='') as csvfile:
     lst = [(','.join(row)).split('\t') for row in a]
 
     over_fifteen = list(map(int, lst[0]))
-    print(over_fifteen)
-
     total_labor_force = list(map(int, lst[1]))
     employed = list(map(int, lst[2]))
     unemployed = list(map(int, lst[3]))
@@ -55,29 +53,6 @@ with open('test1.csv',newline='') as csvfile:
     seasonally_inactive_labor_force_f = list(map(int, lst[18]))
     person_not_in_labor_force_f = list(map(int, lst[19]))
     
-    pred_lst = []
-    
-    pred_lst.append(pre_overfif(over_fifteen))                           #pre_over
-    pred_lst.append(pre_totallabor(total_labor_force))                   #pre_total
-    pred_lst.append(pre_employed(employed))                              #pre_emp
-    pred_lst.append(pre_unemployed(unemployed))                          #pre_unemp
-    pred_lst.append(pre_seasonally(seasonally_inactive_labor_force))     #pre_season
-    pred_lst.append(pre_notinlabor(person_not_in_labor_force))           #pre_not_in
-    
-    pred_lst.append(pre_overfif_m(over_fifteen_m))                       #pre_over_m
-    pred_lst.append(pre_totallabor_m(total_labor_force_m))               #pre_total_m
-    pred_lst.append(pre_employed_m(employed_m))                          #pre_emp_m
-    pred_lst.append(pre_unemployed_m(unemployed_m))                      #pre_unemp_m
-    pred_lst.append(pre_seasonally_m(seasonally_inactive_labor_force_m)) #pre_season_m
-    pred_lst.append(pre_notinlabor_m(person_not_in_labor_force_m))       #pre_not_in_m
-    
-    pred_lst.append(pre_overfif_f(over_fifteen_f))                       #pre_over_f
-    pred_lst.append(pre_totallabor_f(total_labor_force_f))               #pre_total_f
-    pred_lst.append(pre_employed_f(employed_f))                          #pre_emp_f
-    pred_lst.append(pre_unemployed_f(unemployed_f))                      #pre_unemp_f
-    pred_lst.append(pre_seasonally_f(seasonally_inactive_labor_force_f)) #pre_season_f
-    pred_lst.append(pre_notinlabor_f(person_not_in_labor_force_f))       #pre_not_in_f
-
 def pre_overfif(predict):
     year = []
     y_mean = sum(predict) / len(predict)
@@ -103,6 +78,8 @@ def pre_overfif(predict):
     year_pre = int((13*num_b) + y_mean)
     predict.append(year_pre)
     year.append(year_pre)
+
+    return predict
 
 
 def pre_totallabor(predict):
@@ -131,6 +108,7 @@ def pre_totallabor(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
+    return predict
 
 def pre_employed(predict):
     year = []
@@ -158,6 +136,7 @@ def pre_employed(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
+    return predict
 
 def pre_unemployed(predict):
     year = []
@@ -185,8 +164,7 @@ def pre_unemployed(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_seasonally(predict):
     year = []
@@ -214,8 +192,7 @@ def pre_seasonally(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_notinlabor(predict):
     year = []
@@ -243,8 +220,7 @@ def pre_notinlabor(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 ###male
 
@@ -274,8 +250,7 @@ def pre_overfif_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_totallabor_m(predict):
     year = []
@@ -303,8 +278,7 @@ def pre_totallabor_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_employed_m(predict):
     year = []
@@ -332,8 +306,7 @@ def pre_employed_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_unemployed_m(predict):
     year = []
@@ -361,8 +334,7 @@ def pre_unemployed_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_seasonally_m(predict):
     year = []
@@ -390,8 +362,7 @@ def pre_seasonally_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_notinlabor_m(predict):
     year = []
@@ -419,8 +390,7 @@ def pre_notinlabor_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 ###female
 
@@ -450,8 +420,7 @@ def pre_overfif_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_totallabor_f(predict):
     year = []
@@ -479,8 +448,7 @@ def pre_totallabor_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_employed_f(predict):
     year = []
@@ -508,8 +476,7 @@ def pre_employed_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_unemployed_f(predict):
     year = []
@@ -537,8 +504,7 @@ def pre_unemployed_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_seasonally_f(predict):
     year = []
@@ -566,8 +532,7 @@ def pre_seasonally_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-
-    return year
+    return predict
 
 def pre_notinlabor_f(predict):
     year = []
@@ -595,8 +560,31 @@ def pre_notinlabor_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
+    return predict
 
-    return year
+
+pred_lst = []
+pred_lst.append(pre_overfif(over_fifteen))                           #pre_over
+pred_lst.append(pre_totallabor(total_labor_force))                   #pre_total
+pred_lst.append(pre_employed(employed))                              #pre_emp
+pred_lst.append(pre_unemployed(unemployed))                          #pre_unemp
+pred_lst.append(pre_seasonally(seasonally_inactive_labor_force))     #pre_season
+pred_lst.append(pre_notinlabor(person_not_in_labor_force))           #pre_not_in
+    
+pred_lst.append(pre_overfif_m(over_fifteen_m))                       #pre_over_m
+pred_lst.append(pre_totallabor_m(total_labor_force_m))               #pre_total_m
+pred_lst.append(pre_employed_m(employed_m))                          #pre_emp_m
+pred_lst.append(pre_unemployed_m(unemployed_m))                      #pre_unemp_m
+pred_lst.append(pre_seasonally_m(seasonally_inactive_labor_force_m)) #pre_season_m
+pred_lst.append(pre_notinlabor_m(person_not_in_labor_force_m))       #pre_not_in_m
+    
+pred_lst.append(pre_overfif_f(over_fifteen_f))                       #pre_over_f
+pred_lst.append(pre_totallabor_f(total_labor_force_f))               #pre_total_f
+pred_lst.append(pre_employed_f(employed_f))                          #pre_emp_f
+pred_lst.append(pre_unemployed_f(unemployed_f))                      #pre_unemp_f
+pred_lst.append(pre_seasonally_f(seasonally_inactive_labor_force_f)) #pre_season_f
+pred_lst.append(pre_notinlabor_f(person_not_in_labor_force_f))       #pre_not_in_f
+
 
 def create_all_chart(lst):
     count = 0
