@@ -25,6 +25,59 @@ Show predict graphs by using data from lists.
     person not in labor force = lst[19]
 '''
 
+import csv
+import plotly.plotly as py
+from plotly.graph_objs import *
+with open('test1.csv',newline='') as csvfile:
+    a = csv.reader(csvfile)
+    lst = [(','.join(row)).split('\t') for row in a]
+
+    over_fifteen = list(map(int, lst[0]))
+    print(over_fifteen)
+
+    total_labor_force = list(map(int, lst[1]))
+    employed = list(map(int, lst[2]))
+    unemployed = list(map(int, lst[3]))
+    seasonally_inactive_labor_force = list(map(int, lst[4]))
+    person_not_in_labor_force = list(map(int, lst[5]))
+
+    over_fifteen_m = list(map(int, lst[7]))
+    total_labor_force_m = list(map(int, lst[8]))
+    employed_m = list(map(int, lst[9]))
+    unemployed_m = list(map(int, lst[10]))
+    seasonally_inactive_labor_force_m = list(map(int, lst[11]))
+    person_not_in_labor_force_m = list(map(int, lst[12]))
+
+    over_fifteen_f = list(map(int, lst[14]))
+    total_labor_force_f = list(map(int, lst[15]))
+    employed_f = list(map(int, lst[16]))
+    unemployed_f = list(map(int, lst[17]))
+    seasonally_inactive_labor_force_f = list(map(int, lst[18]))
+    person_not_in_labor_force_f = list(map(int, lst[19]))
+    
+    pred_lst = []
+    
+    pred_lst.append(pre_overfif(over_fifteen))                           #pre_over
+    pred_lst.append(pre_totallabor(total_labor_force))                   #pre_total
+    pred_lst.append(pre_employed(employed))                              #pre_emp
+    pred_lst.append(pre_unemployed(unemployed))                          #pre_unemp
+    pred_lst.append(pre_seasonally(seasonally_inactive_labor_force))     #pre_season
+    pred_lst.append(pre_notinlabor(person_not_in_labor_force))           #pre_not_in
+    
+    pred_lst.append(pre_overfif_m(over_fifteen_m))                       #pre_over_m
+    pred_lst.append(pre_totallabor_m(total_labor_force_m))               #pre_total_m
+    pred_lst.append(pre_employed_m(employed_m))                          #pre_emp_m
+    pred_lst.append(pre_unemployed_m(unemployed_m))                      #pre_unemp_m
+    pred_lst.append(pre_seasonally_m(seasonally_inactive_labor_force_m)) #pre_season_m
+    pred_lst.append(pre_notinlabor_m(person_not_in_labor_force_m))       #pre_not_in_m
+    
+    pred_lst.append(pre_overfif_f(over_fifteen_f))                       #pre_over_f
+    pred_lst.append(pre_totallabor_f(total_labor_force_f))               #pre_total_f
+    pred_lst.append(pre_employed_f(employed_f))                          #pre_emp_f
+    pred_lst.append(pre_unemployed_f(unemployed_f))                      #pre_unemp_f
+    pred_lst.append(pre_seasonally_f(seasonally_inactive_labor_force_f)) #pre_season_f
+    pred_lst.append(pre_notinlabor_f(person_not_in_labor_force_f))       #pre_not_in_f
+
 def pre_overfif(predict):
     year = []
     y_mean = sum(predict) / len(predict)
@@ -51,23 +104,6 @@ def pre_overfif(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    return year
 
 def pre_totallabor(predict):
     year = []
@@ -95,23 +131,6 @@ def pre_totallabor(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    return year
 
 def pre_employed(predict):
     year = []
@@ -139,23 +158,6 @@ def pre_employed(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    return year
 
 def pre_unemployed(predict):
     year = []
@@ -183,21 +185,6 @@ def pre_unemployed(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -227,21 +214,6 @@ def pre_seasonally(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -271,21 +243,6 @@ def pre_notinlabor(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -317,21 +274,6 @@ def pre_overfif_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -361,21 +303,6 @@ def pre_totallabor_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -405,21 +332,6 @@ def pre_employed_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -449,21 +361,6 @@ def pre_unemployed_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -493,21 +390,6 @@ def pre_seasonally_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -537,21 +419,6 @@ def pre_notinlabor_m(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -583,21 +450,6 @@ def pre_overfif_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -627,21 +479,6 @@ def pre_totallabor_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -671,21 +508,6 @@ def pre_employed_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -715,21 +537,6 @@ def pre_unemployed_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -759,21 +566,6 @@ def pre_seasonally_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
@@ -803,38 +595,16 @@ def pre_notinlabor_f(predict):
     predict.append(year_pre)
     year.append(year_pre)
 
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
-    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((7*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
-
-    y_mean = sum(predict) / len(predict)
-    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
-    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
-    num_b = xy_predict / xsquare_predict
-    year_pre = int((15*num_b) + y_mean)
-    predict.append(year_pre)
-    year.append(year_pre)
 
     return year
 
-import csv
-import plotly.plotly as py
-from plotly.graph_objs import *
-with open('test1.csv',newline='') as csvfile:
-    a = csv.reader(csvfile)
-    lst = [(','.join(row)).split('\t') for row in a]
-
 def create_all_chart(lst):
     count = 0
-    for year in range(4):
-        py.sign_in('phunpp', '9cjduh3bzn')
+    for year in range(10):
+        py.sign_in('it58070041', 'bxhjqg6nps')
         trace1 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_overfif(lst[0][count]), pre_overfif_m(lst[7][count]), pre_overfif_f(lst[14][count])],
+            y=[lst[0][count], lst[7][count], lst[14][count]],
             marker=Marker(
                 color='#86a2d7'
             ),
@@ -842,7 +612,7 @@ def create_all_chart(lst):
         )
         trace2 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_totallabor(lst[1][count]), pre_totallabor_m(lst[8][count]), pre_totallabor_f(lst[15][count])],
+            y=[lst[1][count], lst[8][count], lst[15][count]],
             marker=Marker(
                 color='#3aa0ad'
             ),
@@ -850,7 +620,7 @@ def create_all_chart(lst):
         )
         trace3 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_employed(lst[2][count]), pre_employed_m(lst[9][count]), pre_employed_f(lst[16][count])],
+            y=[lst[2][count], lst[9][count], lst[16][count]],
             marker=Marker(
                 color='#6b80ce'
             ),
@@ -858,7 +628,7 @@ def create_all_chart(lst):
         )
         trace4 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_unemployed(lst[3][count]), pre_unemployed_m(lst[10][count]), pre_unemployed_f(lst[17][count])],
+            y=[lst[3][count], lst[10][count], lst[17][count]],
             marker=Marker(
                 color='#3b86b2'
             ),
@@ -866,7 +636,7 @@ def create_all_chart(lst):
         )
         trace5 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_seasonally(lst[4][count]), pre_seasonally_m(lst[11][count]), pre_seasonally_f(lst[18][count])],
+            y=[lst[4][count], lst[11][count], lst[18][count]],
             marker=Marker(
                 color='#2d4686'
             ),
@@ -874,7 +644,7 @@ def create_all_chart(lst):
         )
         trace6 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
-            y=[pre_notinlabor(lst[5][count]), pre_notinlabor_m(lst[12][count]), pre_notinlabor_f(lst[19][count])],
+            y=[lst[5][count], lst[12][count], lst[19][count]],
             marker=Marker(
                 color='#1b3c50'
             ),
@@ -904,7 +674,7 @@ def create_all_chart(lst):
 
         count += 1
 
-        py.sign_in('phunpp', '9cjduh3bzn')
+        py.sign_in('it58070041', 'bxhjqg6nps')
 trace1 = Scatter(
     x=[2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
     y=list(map(str, lst[0])),
