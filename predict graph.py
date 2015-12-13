@@ -25,6 +25,802 @@ Show predict graphs by using data from lists.
     person not in labor force = lst[19]
 '''
 
+def pre_overfif(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_totallabor(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_employed(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_unemployed(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_seasonally(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_notinlabor(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+###male
+
+def pre_overfif_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_totallabor_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_employed_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_unemployed_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_seasonally_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_notinlabor_m(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+###female
+
+def pre_overfif_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_totallabor_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_employed_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_unemployed_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_seasonally_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
+def pre_notinlabor_f(predict):
+    year = []
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-9) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-9)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((11*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+    
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-5) for i in range(len(predict))])
+    xsquare_predict = sum([(j-5)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((6*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-11) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-11)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((13*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i-6) for i in range(len(predict))])
+    xsquare_predict = sum([(j-6)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((7*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    y_mean = sum(predict) / len(predict)
+    xy_predict = sum([predict[i]*(i*2-13) for i in range(len(predict))])
+    xsquare_predict = sum([(j*2-13)**2 for j in range(len(predict))])
+    num_b = xy_predict / xsquare_predict
+    year_pre = int((15*num_b) + y_mean)
+    predict.append(year_pre)
+    year.append(year_pre)
+
+    return year
+
 import csv
 import plotly.plotly as py
 from plotly.graph_objs import *
