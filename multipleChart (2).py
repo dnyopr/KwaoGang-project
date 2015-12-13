@@ -1,41 +1,36 @@
+'''
+Show graphs by using data from lists.
+
+    Lines below are kind of lists.
+1. All population
+    over fifteen = lst[0]
+    total labor force = lst[1]
+    employed = lst[2]
+    unemployed = lst[3]
+    seasonally inactive labor force = lst[4]
+    person not in labor force = lst[5]
+2. Male population
+    over fifteen = lst[7]
+    total labor force = lst[8]
+    employed = lst[9]
+    unemployed = lst[10]
+    seasonally inactive labor force = lst[11]
+    person not in labor force = lst[12]
+3. Female population
+    over fifteen = lst[14]
+    total labor force = lst[15]
+    employed = lst[16]
+    unemployed = lst[17]
+    seasonally inactive labor force = lst[18]
+    person not in labor force = lst[19]
+'''
+
 import csv
 import plotly.plotly as py
 from plotly.graph_objs import *
 with open('test1.csv',newline='') as csvfile:
     a = csv.reader(csvfile)
-    lst = []
-    for row in a:
-        lst.append((','.join(row)).split('\t'))
-def main(lst):
-    all_population(lst)
-    male_population(lst)
-    female_population(lst)
-
-def all_population(lst):
-    over_fifteen = list(map(int, lst[0]))
-    total_labor_force = list(map(int, lst[1]))
-    employed = list(map(int, lst[2]))
-    unemployed = list(map(int, lst[3]))
-    seasonally_inactive_labor_force = list(map(int, lst[4]))
-    person_not_in_labor_force = list(map(int, lst[5]))
-
-def male_population(lst):
-    over_fifteen_m = list(map(int, lst[7]))
-    total_labor_force_m = list(map(int, lst[8]))
-    employed_m = list(map(int, lst[9]))
-    unemployed_m = list(map(int, lst[10]))
-    seasonally_inactive_labor_force_m = list(map(int, lst[11]))
-    person_not_in_labor_force_m = list(map(int, lst[12]))
-
-
-def female_population(lst):
-    over_fifteen_f = list(map(int, lst[14]))
-    total_labor_force_f = list(map(int, lst[15]))
-    employed_f = list(map(int, lst[16]))
-    unemployed_f = list(map(int, lst[17]))
-    seasonally_inactive_labor_force_f = list(map(int, lst[18]))
-    person_not_in_labor_force_f = list(map(int, lst[19]))
-
+    lst = [(','.join(row)).split('\t') for row in a]
 
 def create_all_chart(lst):
     count = 0
