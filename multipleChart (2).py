@@ -47,7 +47,7 @@ def create_all_chart(lst):
             marker=Marker(
                 color='#86a2d7'
             ),
-            name='over_fifteen'
+            name='Over fifteen'
         )
         trace2 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
@@ -55,7 +55,7 @@ def create_all_chart(lst):
             marker=Marker(
                 color='#3aa0ad'
             ),
-            name='total_labor_force'
+            name='Total labor force'
         )
         trace3 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
@@ -63,7 +63,7 @@ def create_all_chart(lst):
             marker=Marker(
                 color='#6b80ce'
             ),
-            name='employed'
+            name='Employed'
         )
         trace4 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
@@ -79,7 +79,7 @@ def create_all_chart(lst):
             marker=Marker(
                 color='#2d4686'
             ),
-            name='seasonally_inactive_labor_force'
+            name='Seasonally inactive labor force'
         )
         trace6 = Bar(
             x=['All_population', 'Male_population', 'Female_population'],
@@ -87,7 +87,7 @@ def create_all_chart(lst):
             marker=Marker(
                 color='#1b3c50'
             ),
-            name='person_not_in_labor_force'
+            name='Person not in labor force'
         )
 
         data = Data([trace1, trace2, trace3, trace4, trace5, trace6])
@@ -121,7 +121,7 @@ trace1 = Scatter(
         size=12
     ),
     mode='lines+markers',
-    name='Over_fifteen',
+    name='Over fifteen',
     uid='ebe0393b947e2424868405e02d0fa8c2',
     xsrc='RhettAllain:45:7515eedb1e574665588442b0ced1549b',
     ysrc='RhettAllain:45:4e00758aa75a9cc2afa876ddead953cd'
@@ -133,7 +133,7 @@ trace2 = Scatter(
         size=12
     ),
     mode='lines+markers',
-    name='Total_labor_force',
+    name='Total labor force',
     uid='ceb83af3b01ca5c2c296f4e1c2a6a47e',
     xsrc='RhettAllain:45:2170f9fb9db6d6acf13c9cbcef844ced',
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
@@ -169,7 +169,7 @@ trace5 = Scatter(
         size=12
     ),
     mode='lines+markers',
-    name='seasonally_inactive_labor_force',
+    name='Seasonally inactive labor force',
     uid='ceb83af3b01ca5c2c296f4e1c2a6a47e',
     xsrc='RhettAllain:45:2170f9fb9db6d6acf13c9cbcef844ced',
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
@@ -181,7 +181,7 @@ trace6 = Scatter(
         size=12
     ),
     mode='lines+markers',
-    name='person_not_in_labor_force',
+    name='Person not in labor force',
     uid='ceb83af3b01ca5c2c296f4e1c2a6a47e',
     xsrc='RhettAllain:45:2170f9fb9db6d6acf13c9cbcef844ced',
     ysrc='RhettAllain:45:641326b589d4672d747c36c1db112711'
