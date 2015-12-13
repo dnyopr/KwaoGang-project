@@ -1,0 +1,82 @@
+<div>
+    <a href="https://plot.ly/~kawin3236/3/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/3.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:3"  src="https://plot.ly/embed.js" async></script>
+</div>
+---------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/5/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/5.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:5"  src="https://plot.ly/embed.js" async></script>
+</div>
+-------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/7/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/7.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:7"  src="https://plot.ly/embed.js" async></script>
+</div>
+------------------------------------------------------------------------
+^
+^
+^
+predict
+
+v
+v
+v
+1. กราฟเส้น 2ลงไปเป็นกราปแท่ง1-10
+---------------------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/29/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/29.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:29"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+-------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/9/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/9.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:9"  src="https://plot.ly/embed.js" async></script>
+</div>
+----------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/11/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/11.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:11"  src="https://plot.ly/embed.js" async></script>
+</div>
+----------------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/13/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/13.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:13"  src="https://plot.ly/embed.js" async></script>
+</div>
+-----------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/15/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/15.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:15"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+------------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/17/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/17.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:17"  src="https://plot.ly/embed.js" async></script>
+</div>
+--------------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/19/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/19.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:19"  src="https://plot.ly/embed.js" async></script>
+</div>
+-----------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/21/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/21.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:21"  src="https://plot.ly/embed.js" async></script>
+</div>
+-------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/23/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/23.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:23"  src="https://plot.ly/embed.js" async></script>
+</div>
+-----------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/25/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/25.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:25"  src="https://plot.ly/embed.js" async></script>
+</div>
+-------------------------------------------------------------------------------
+<div>
+    <a href="https://plot.ly/~kawin3236/27/" target="_blank" title="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="display: block; text-align: center;"><img src="https://plot.ly/~kawin3236/27.png" alt="Over fifteen, Total labor force, Employed, Unemployed, Seasonally inactive labor force, Person not in labor force" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="kawin3236:27"  src="https://plot.ly/embed.js" async></script>
+</div>
+----------------------------------------------------
