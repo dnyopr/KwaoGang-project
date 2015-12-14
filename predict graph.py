@@ -83,7 +83,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[0][year], pred_lst[6][year], pred_lst[12][year]],
             marker=Marker(
-                color='#86a2d7'
+                color='#A94308' #darkorange
             ),
             name='Over fifteen'
         )
@@ -91,7 +91,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[1][year], pred_lst[7][year], pred_lst[13][year]],
             marker=Marker(
-                color='#3aa0ad'
+                color='#EFE4D5' #gray-cream
             ),
             name='Total labor force'
         )
@@ -99,7 +99,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[2][year], pred_lst[8][year], pred_lst[14][year]],
             marker=Marker(
-                color='#6b80ce'
+                color='#E5D276' #yellomustard
             ),
             name='Employed'
         )
@@ -107,7 +107,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[3][year], pred_lst[9][year], pred_lst[15][year]],
             marker=Marker(
-                color='#3b86b2'
+                color='#8DCC75' #lightgreen
             ),
             name='Unemployed'
         )
@@ -115,7 +115,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[4][year], pred_lst[10][year], pred_lst[16][year]],
             marker=Marker(
-                color='#2d4686'
+                color='#287610' #green
             ),
             name='Seasonally inactive labor force'
         )
@@ -123,7 +123,7 @@ def create_all_chart(pred_lst):
             x=['All_population', 'Male_population', 'Female_population'],
             y=[pred_lst[5][year], pred_lst[11][year], pred_lst[17][year]],
             marker=Marker(
-                color='#1b3c50'
+                color='#999999' #gray
             ),
             name='Person not in labor force'
         )
